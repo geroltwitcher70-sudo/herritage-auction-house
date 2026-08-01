@@ -102,10 +102,6 @@ transform:rotate(360deg);
 
 
 
-/* =========================
-HEADER
-========================= */
-
 
 header{
 
@@ -119,7 +115,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(8,8,8,.75);
+background:rgba(0,0,0,95);
 
 backdrop-filter:blur(15px);
 
@@ -131,15 +127,32 @@ z-index:1000;
 
 
 
-.logo{
+.logo-container{
 
-font-size:28px;
-font-weight:700;
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
 
 }
 
+.logo-img{
 
-.logo span{
+height: 75px;;
+width:auto;
+object-fit:contain;
+
+}
+
+.logo-text{
+
+font-size:28px;
+font-weight:700;
+color:white;
+
+}
+
+.logo-text span{
 
 color:var(--gold);
 
@@ -185,11 +198,6 @@ cursor:pointer;
 
 
 
-/* =========================
-HERO
-========================= */
-
-
 .hero{
 
 height:100vh;
@@ -201,7 +209,7 @@ rgba(0,0,0,.8),
 rgba(0,0,0,.85)
 ),
 
-url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+url(image/xx.jpeg);
 
 
 background-size:cover;
@@ -210,16 +218,15 @@ background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
-
 text-align:center;
 
 }
 
 
-
 .hero-content{
 
 max-width:900px;
+
 
 animation:fadeUp 1.2s;
 
@@ -875,6 +882,19 @@ display:block;
 
 
 
+.logo-img{
+
+height:35px;
+
+}
+
+.logo-text{
+
+font-size:22px;
+
+}
+
+
 .hero h1{
 
 font-size:40px;
@@ -936,29 +956,19 @@ font-size:35px;
 </head>
 
 <body>
-    <!-- =========================
-LOADER
-========================= -->
+  
 
 <div id="loader">
 <div class="spinner"></div>
 </div>
 
 
-
-<!-- =========================
-HEADER
-========================= -->
-
 <header>
 
-<div class="logo">
-    <div class="logo">
-
-</div>
-
-Herritage <span>Auction</span>
-</div>
+<a href="#home" class="logo-container">
+    <img src="image/pp.jpeg" alt="Herritage Auction Logo" class="logo-img">
+    <div class="logo-text">Herritage <span>Auction</span></div>
+</a>
 
 
 <nav id="nav">
@@ -1119,13 +1129,6 @@ with trust and professionalism.
 
 
 
-
-
-<!-- =========================
-WHY US
-========================= -->
-
-
 <section id="why">
 
 
@@ -1203,13 +1206,6 @@ Complete support from start to finish.
 
 
 
-
-
-<!-- =========================
-SERVICES
-========================= -->
-
-
 <section id="services">
 
 
@@ -1269,13 +1265,6 @@ Our Services
 
 
 
-
-
-<!-- =========================
-GLOBAL
-========================= -->
-
-
 <section id="presence">
 
 
@@ -1302,13 +1291,6 @@ Global Presence
 
 </section>
 
-
-
-
-
-<!-- =========================
-STATS
-========================= -->
 
 
 <section id="stats">
@@ -1370,13 +1352,6 @@ Support
 
 
 
-
-
-<!-- =========================
-TEAM
-========================= -->
-
-
 <section id="team">
 
 
@@ -1424,11 +1399,11 @@ Dubai
 <div class="member">
 
 <h3>
-Ankur Singh
+Ankur Sharma
 </h3>
 
 <span>
-     Indian Head
+    Indian Head
 </span>
 
 </div>
@@ -1481,7 +1456,7 @@ Technical
 <div class="member">
 
 <h3>
-Dr. Y M pillay  
+Dr. Y M Pillay  
 </h3>
 
 <span>
@@ -1672,6 +1647,7 @@ clearInterval(interval);
 const form=document.querySelector("form");
 
 
+if(form){
 form.addEventListener("submit",(e)=>{
 
 
@@ -1685,6 +1661,7 @@ form.reset();
 
 
 });
+}
 
 
 </script>
